@@ -1,76 +1,137 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>University of the East | Manila Campus</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<style>
-		:root { --ue-red: #ae1018; --ue-dark: #252525; --ue-pale: #f4f4f4; }
-		body { margin: 0; color: var(--ue-dark); font-family: Arial, sans-serif; background: var(--ue-pale); }
-		.utility-bar { background: var(--ue-red); font-size: .72rem; }
-		.utility-bar a { color: #fff; text-decoration: none; opacity: .9; }
-		.utility-bar a:hover { opacity: 1; }
-		.masthead { background: #fff; }
-		.ue-mark { width: 72px; height: 72px; border: 2px solid var(--ue-red); border-radius: 50%; color: var(--ue-red); display: grid; place-items: center; text-align: center; font-size: .56rem; font-weight: 700; line-height: 1.1; }
-		.brand-name { color: var(--ue-red); font-family: Georgia, serif; font-size: clamp(1.7rem, 3vw, 2.45rem); line-height: .95; }
-		.brand-subtitle { color: #555; font-size: 1rem; }
-		.anniversary { border-left: 1px solid #777; padding-left: 1.25rem; color: var(--ue-red); }
-		.anniversary strong { font-size: 2.1rem; line-height: 1; }
-		.anniversary small { display: block; font-style: italic; }
-		.site-nav { background: #f1f1f1; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-		.site-nav .nav-link { color: #505050; font-size: .78rem; padding: 1rem .9rem; }
-		.site-nav .nav-link:hover, .site-nav .nav-link.active { color: var(--ue-red); }
-		.hero-wrap { max-width: 1268px; margin: 1.1rem auto 0; }
-		.hero-slide { min-height: 455px; position: relative; background: #fff; overflow: hidden; }
-		.hero-image { width: 100%; height: 455px; object-fit: cover; }
-		.hero-copy { position: absolute; inset: 0; max-width: 850px; padding: clamp(2rem, 6vw, 5rem) clamp(1.4rem, 6vw, 6rem); background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.88) 55%, rgba(255,255,255,0) 100%); }
-		.hero-kicker { color: var(--ue-red); font-weight: 700; letter-spacing: .04em; font-size: clamp(1rem, 2vw, 1.5rem); }
-		.hero-title { color: var(--ue-red); font-size: clamp(2.5rem, 7vw, 6rem); font-weight: 800; line-height: .96; margin: .7rem 0 1rem; }
-		.hero-copy p { max-width: 560px; font-size: clamp(1rem, 2vw, 1.3rem); }
-		.hero-actions .btn { border-radius: 0; font-weight: 700; padding: .8rem 1.25rem; }
-		.btn-ue { background: var(--ue-red); border-color: var(--ue-red); color: #fff; }
-		.btn-ue:hover { background: #850c12; border-color: #850c12; color: #fff; }
-		.btn-outline-ue { color: var(--ue-red); border-color: var(--ue-red); }
-		.btn-outline-ue:hover { background: var(--ue-red); color: #fff; }
-		.carousel-control-prev, .carousel-control-next { width: 7%; }
-		.carousel-control-prev-icon, .carousel-control-next-icon { background-color: #555; border-radius: 50%; padding: 1.4rem; background-size: 45%; }
-		.chat-button { position: fixed; right: 1.25rem; bottom: 1.25rem; width: 48px; height: 48px; border: 0; border-radius: 50%; background: #ed1c24; color: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.25); }
-		@media (max-width: 767.98px) { .anniversary { border-left: 0; padding-left: 0; margin-top: 1rem; } .site-nav .nav-link { padding: .65rem .9rem; } .hero-slide, .hero-image { min-height: 540px; height: 540px; } .hero-copy { padding-top: 4rem; background: rgba(255,255,255,.88); } }
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore Computer Engineering at UE. Discover hardware, software, and intelligent systems, and test your skills in the interactive CpE Play Lab.">
+    <meta name="theme-color" content="#101113">
+    <title>UE Computer Engineering | Engineer What's Next</title>
+    <link href="assets/fonts.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap.min.css" rel="stylesheet">
+    <script src="js/theme-init.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/experience.css">
 </head>
-<body>
-	<header>
-		<div class="utility-bar">
-			<div class="container d-flex justify-content-end gap-3 py-2">
-				<a href="#contact">Contact</a><a href="#manila">Manila</a><a href="#caloocan">Caloocan</a><a href="#uerm">UERM</a><a class="fw-bold" href="#apply">Apply Now!</a>
-			</div>
-		</div>
-		<div class="masthead py-3 py-md-4">
-			<div class="container d-flex flex-wrap align-items-center gap-3">
-				<div class="ue-mark">UNIVERSITY<br>OF THE EAST<br>PHILIPPINES</div>
-				<div><div class="brand-name">University of the East</div><div class="brand-subtitle text-end">Manila Campus</div></div>
-				<div class="anniversary d-flex align-items-center gap-2 ms-md-2"><strong>80</strong><div><div class="fw-semibold">Foundation Anniversary</div><small>Honoring the Past<br>Building the Future</small></div></div>
-			</div>
-		</div>
-		<nav class="site-nav navbar navbar-expand-md navbar-light">
-			<div class="container"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav mx-auto align-items-md-center"><li class="nav-item"><a class="nav-link active" href="#home">Home</a></li><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li><li class="nav-item"><a class="nav-link" href="#calendar">School Calendar</a></li><li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li><li class="nav-item"><a class="nav-link" href="#services">Student Services</a></li><li class="nav-item"><a class="nav-link" href="#libraries">Libraries</a></li><li class="nav-item"><a class="nav-link" href="#alumni">Alumni</a></li></ul><button class="btn btn-link text-danger fs-5" aria-label="Search"><i class="bi bi-search"></i></button></div>
-			</div>
-		</nav>
-	</header>
-	<main id="home" class="hero-wrap">
-		<div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-indicators"><button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button><button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button></div>
-			<div class="carousel-inner">
-				<section class="carousel-item active hero-slide"><img class="hero-image" src="images/hero.jpg" alt="University students"><div class="hero-copy"><div class="hero-kicker">UNIVERSITY OF THE EAST<br>College of Engineering-Manila</div><h1 class="hero-title">Congratulations,<br>Mechanical Engineer<br>Topnotcher!</h1><p>Celebrating excellence, dedication, and the bright future of our Eastians.</p><div class="hero-actions d-flex flex-wrap gap-2"><a class="btn btn-ue" href="#read-more">Read the story</a><a class="btn btn-outline-ue" href="#admissions">Explore UE</a></div></div></section>
-				<section class="carousel-item hero-slide"><img class="hero-image" src="images/hero-2.jpg" alt="Students on campus"><div class="hero-copy"><div class="hero-kicker">YOUR FUTURE BEGINS IN THE EAST</div><h2 class="hero-title">Shape what comes next.</h2><p>Discover programs, people, and opportunities built for the world ahead.</p><a class="btn btn-ue" href="#apply">Start your application</a></div></section>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev" aria-label="Previous slide"><span class="carousel-control-prev-icon"></span></button><button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next" aria-label="Next slide"><span class="carousel-control-next-icon"></span></button>
-		</div>
-	</main>
-	<button class="chat-button" type="button" aria-label="Open chat"><i class="bi bi-chat-square-text fs-5"></i></button>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="progress-line" aria-hidden="true"></div>
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+        <symbol id="i-diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+        <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"/><rect x="9" y="9" width="6" height="6" rx="1"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16"/></symbol>
+        <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="18" r="3"/><circle cx="19" cy="18" r="3"/><path d="m10 8-4 7m8-7 4 7M8 18h8"/></symbol>
+        <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 7h10c3 0 4 3 4 6l1 4c.4 3-3 4-5 1l-1-1H8l-1 1c-2 3-5 2-5-1l1-4c0-3 1-6 4-6Z"/><path d="M8 10v6m-3-3h6m5-2h.01m3 3h.01"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 3v7c0 5-8 10-8 10S4 17 4 12V5Z"/><path d="m8 12 3 3 5-6"/></symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/></symbol>
+        <symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M1 12h3m16 0h3M8 12h1m6 0h1m-8 4h8"/><circle cx="12" cy="2" r="1"/></symbol>
+    </defs></svg>
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><span class="brand-mark">UE<span class="brand-mark-dot"></span></span><span class="brand-wordmark">COMPUTER<span>ENGINEERING</span></span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-cpe.html">About CpE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cpe-ue.html">CpE at UE</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="specializations.html">Specializations</a></li><li><a class="dropdown-item" href="careers.html">Careers</a></li><li><a class="dropdown-item" href="projects.html">Projects</a></li></ul></li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Community</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="faculty.html">Faculty</a></li><li><a class="dropdown-item" href="scpes.html">SCPES</a></li><li><a class="dropdown-item" href="contact.html">Contact & FAQ</a></li></ul></li>
+                        <li class="nav-item"><a class="nav-link nav-play" href="index.html#play-lab"><span aria-hidden="true">▷</span> Play Lab <span class="new-tag">NEW</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+        <section class="cpe-hero" aria-labelledby="hero-title">
+            <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <div class="hero-topline"><span><i class="status-dot"></i> UNIVERSITY OF THE EAST</span><span>HARDWARE / SOFTWARE / POSSIBILITY</span></div>
+                <div class="hero-layout">
+                    <div class="hero-story">
+                        <div class="hero-kicker"><span class="tiny-cross" aria-hidden="true">+</span> THE FUTURE IS YOURS TO BUILD</div>
+                        <h1 id="hero-title">Engineer<br>what’s <span class="next-word">next<span class="headline-dot">.</span><svg viewBox="0 0 280 18" aria-hidden="true"><path d="M3 13Q125-4 274 8"/></svg></span></h1>
+                        <p>Where code meets circuits.<br>Turn your curiosity into the systems that move the world. Discover Computer Engineering at UE.</p>
+                        <div class="hero-actions"><a class="action-button primary-action" href="about-cpe.html">Explore the possibilities <svg class="ui-icon"><use href="#i-arrow"/></svg></a><a class="action-button subtle-action" href="#play-lab"><svg class="ui-icon"><use href="#i-game"/></svg> Enter the Play Lab</a></div>
+                        <div class="hero-footnote"><span class="mini-stack" aria-hidden="true"><span>01</span><span>10</span><span>11</span></span><span>Big ideas start with a single bit.</span></div>
+                    </div>
+                    <div class="core-scene" aria-label="Illustration of an illuminated processor connecting hardware, software, and intelligent systems" role="img">
+                        <div class="core-orbit orbit-one"></div><div class="core-orbit orbit-two"></div>
+                        <div class="core-coordinate coordinate-top">FIG. 01 — THE CONNECTED CORE</div>
+                        <img class="core-art" src="assets/processor.svg" alt="" width="720" height="620" fetchpriority="high">
+                        <svg class="core-art core-signals" viewBox="0 0 720 620" width="720" height="620" fill="none" aria-hidden="true"><g transform="translate(360 330) scale(1 .55) rotate(45)"><path d="M-48-140V-163L-64-179V-225"/><path d="M0-145L28-173V-220"/><path d="M48-115L118-185V-215"/><path d="M48 115V163L64 179V225"/><path d="M-115 0H-145L-173 28H-220"/><path d="M115 48H137L173 84H215"/></g></svg>
+                        <div class="core-label label-hardware"><svg class="ui-icon"><use href="#i-chip"/></svg><span>HARDWARE<small>Build the foundation</small></span><i class="status-dot"></i></div>
+                        <div class="core-label label-software"><svg class="ui-icon"><use href="#i-code"/></svg><span>SOFTWARE<small>Bring it to life</small></span><i class="status-dot"></i></div>
+                        <div class="core-label label-intelligence"><svg class="ui-icon"><use href="#i-network"/></svg><span>INTELLIGENCE<small>Connect the possibilities</small></span></div>
+                        <div class="core-coordinate coordinate-bottom"><span class="signal-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span> SYSTEM ONLINE <span class="core-version">CPE / ∞</span></div>
+                    </div>
+                </div>
+                <div class="hero-bottom"><a href="#the-discipline"><span class="scroll-mouse" aria-hidden="true"></span> SCROLL TO DISCOVER <span aria-hidden="true">↓</span></a><span>DESIGN. DEVELOP. <b>MAKE A DIFFERENCE.</b></span><button class="motion-control" type="button" aria-pressed="false"><span aria-hidden="true">Ⅱ</span> Pause effects</button></div>
+            </div>
+        </section>
+        <div class="tech-ticker" role="img" aria-label="Explore embedded systems, robotics, artificial intelligence, cybersecurity, IoT, and computer architecture"><div class="ticker-track" aria-hidden="true"><div><span>EMBEDDED SYSTEMS</span><b>✳</b><span>ROBOTICS</span><b>✳</b><span>ARTIFICIAL INTELLIGENCE</span><b>✳</b><span>CYBERSECURITY</span><b>✳</b><span>INTERNET OF THINGS</span><b>✳</b><span>COMPUTER ARCHITECTURE</span><b>✳</b></div><div><span>EMBEDDED SYSTEMS</span><b>✳</b><span>ROBOTICS</span><b>✳</b><span>ARTIFICIAL INTELLIGENCE</span><b>✳</b><span>CYBERSECURITY</span><b>✳</b><span>INTERNET OF THINGS</span><b>✳</b><span>COMPUTER ARCHITECTURE</span><b>✳</b></div></div></div>
+        <section class="experience-section discipline-section" id="the-discipline">
+            <div class="container">
+                <div class="section-intro reveal"><div><span class="section-label">01 / THE DISCIPLINE</span><h2>One discipline.<br><span class="muted-heading">Limitless intersections.</span></h2></div><p>Computer Engineering brings hardware and software together. You don’t just use technology. You learn to create what comes next.</p></div>
+                <div class="discipline-grid">
+                    <a class="discipline-card spotlight-card reveal" href="about-cpe.html"><div class="card-index"><span>01 — THE PHYSICAL</span><svg class="ui-icon"><use href="#i-diagonal"/></svg></div><div class="discipline-art hardware-art" aria-hidden="true"><span class="mini-chip"><svg class="ui-icon"><use href="#i-chip"/></svg></span><i></i><i></i></div><h3>Hardware.</h3><p>From the first circuit to the next processor. Build the foundations of computation.</p><div class="card-tags"><span>CIRCUITS</span><span>PROCESSORS</span><span>SENSORS</span></div></a>
+                    <a class="discipline-card spotlight-card reveal" href="specializations.html"><div class="card-index"><span>02 — THE LOGICAL</span><svg class="ui-icon"><use href="#i-diagonal"/></svg></div><div class="discipline-art code-art" aria-hidden="true"><code><span>const</span> future = {<br>&nbsp; ideas: <em>Infinity</em>,<br>&nbsp; build: <span>() =&gt;</span> <em>you</em><br>};<i>_</i></code></div><h3>Software.</h3><p>Think in algorithms. Create with code. Give powerful hardware a purpose.</p><div class="card-tags"><span>CODE</span><span>ALGORITHMS</span><span>SYSTEMS</span></div></a>
+                    <a class="discipline-card spotlight-card reveal" href="projects.html"><div class="card-index"><span>03 — THE CONNECTION</span><svg class="ui-icon"><use href="#i-diagonal"/></svg></div><div class="discipline-art integration-art" aria-hidden="true"><span><svg class="ui-icon"><use href="#i-chip"/></svg></span><i></i><span class="integration-center"><svg class="ui-icon"><use href="#i-spark"/></svg></span><i></i><span><svg class="ui-icon"><use href="#i-code"/></svg></span></div><h3>Integration.</h3><p>Connect both worlds. Make intelligent systems that sense, decide, and act.</p><div class="card-tags"><span>ROBOTICS</span><span>IoT</span><span>INTELLIGENCE</span></div></a>
+                </div>
+                <div class="section-endnote"><span>HARDWARE + SOFTWARE + YOU</span><a class="text-link" href="about-cpe.html">Get to know Computer Engineering <span aria-hidden="true">↗</span></a></div>
+            </div>
+        </section>
+        <section class="experience-section fields-section" id="explore-fields">
+            <div class="container"><div class="section-intro reveal"><div><span class="section-label">02 / FIND YOUR FREQUENCY</span><h2>Follow your curiosity.</h2></div><a class="text-link" href="specializations.html">All 14 technology areas <span aria-hidden="true">↗</span></a></div>
+                <div class="fields-grid">
+                    <a class="field-feature spotlight-card reveal" href="specializations.html"><div><span class="small-badge">HARDWARE MEETS THE REAL WORLD</span><h3>Small devices.<br>Extraordinary impact.</h3><p>Explore embedded systems and the Internet of Things. Build intelligence into everyday life.</p></div><div class="field-schematic" aria-hidden="true"><span class="schematic-node">INPUT</span><i></i><span class="schematic-chip"><svg class="ui-icon"><use href="#i-chip"/></svg></span><i></i><span class="schematic-node">IMPACT</span><span class="schematic-caption">SENSE → PROCESS → ACT</span></div><span class="field-bottom">Embedded Systems & IoT <svg class="ui-icon"><use href="#i-diagonal"/></svg></span></a>
+                    <a class="field-card spotlight-card reveal" href="specializations.html"><svg class="ui-icon field-icon"><use href="#i-spark"/></svg><span class="field-number">01</span><h3>Artificial Intelligence</h3><p>Teach systems to see patterns.</p><svg class="ui-icon field-arrow"><use href="#i-diagonal"/></svg></a>
+                    <a class="field-card spotlight-card reveal" href="specializations.html"><svg class="ui-icon field-icon"><use href="#i-robot"/></svg><span class="field-number">02</span><h3>Robotics & Automation</h3><p>Give your ideas a way to move.</p><svg class="ui-icon field-arrow"><use href="#i-diagonal"/></svg></a>
+                    <a class="field-card spotlight-card reveal" href="specializations.html"><svg class="ui-icon field-icon"><use href="#i-shield"/></svg><span class="field-number">03</span><h3>Cybersecurity</h3><p>Engineer trust into every layer.</p><svg class="ui-icon field-arrow"><use href="#i-diagonal"/></svg></a>
+                    <a class="field-card spotlight-card reveal" href="specializations.html"><svg class="ui-icon field-icon"><use href="#i-network"/></svg><span class="field-number">04</span><h3>Computer Networks</h3><p>Connect a world of possibilities.</p><svg class="ui-icon field-arrow"><use href="#i-diagonal"/></svg></a>
+                </div>
+            </div>
+        </section>
+        <section class="experience-section play-section" id="play-lab" aria-labelledby="play-heading">
+            <div class="container"><div class="play-lab-shell reveal">
+                <div class="lab-topbar"><span><i class="status-dot"></i> THE CPE PLAY LAB</span><span>LESS SCROLLING. MORE SOLVING.</span><svg class="ui-icon"><use href="#i-game"/></svg></div>
+                <div class="lab-layout"><div class="lab-story"><span class="small-badge">YOUR BRAIN. UPGRADED.</span><h2 id="play-heading">Think you’ve<br>got the <span>bits?</span></h2><p>Put your engineering instincts to the test. Decode binary, crack logic gates, or take on a CpE knowledge quest.</p><div class="lab-perks"><span>✳ Instant explanations</span><span>↗ Beat your best</span><span>∞ Unlimited replays</span></div><div class="lab-personal-best"><span>YOUR BEST <b id="lab-best">0</b> XP</span><small>Saved on this browser</small></div></div>
+                    <div class="lab-console">
+                        <fieldset class="mode-picker"><legend>01 / SELECT YOUR CHALLENGE</legend>
+                            <button class="mode-button selected" type="button" data-mode="quest" aria-pressed="true"><span class="mode-symbol">&lt;/&gt;</span><span><b>Knowledge Quest</b><small>Hardware, software & everything between</small></span><span class="mode-check" aria-hidden="true">↗</span></button>
+                            <button class="mode-button" type="button" data-mode="binary" aria-pressed="false"><span class="mode-symbol">01</span><span><b>Binary Builder</b><small>8 bits. One target. Can you decode it?</small></span><span class="mode-check" aria-hidden="true">↗</span></button>
+                            <button class="mode-button" type="button" data-mode="logic" aria-pressed="false"><span class="mode-symbol">&amp;</span><span><b>Logic Lab</b><small>Read the inputs. Predict the output.</small></span><span class="mode-check" aria-hidden="true">↗</span></button>
+                        </fieldset>
+                        <div class="challenge-meta" id="challenge-meta"><span>8 ROUNDS</span><span>NO TIME LIMIT</span><span>BEGINNER FRIENDLY</span></div>
+                        <button class="action-button primary-action launch-game" id="launch-game" type="button">Initialize challenge <svg class="ui-icon"><use href="#i-arrow"/></svg></button>
+                        <p class="lab-hint">No signup. Just curiosity. <span>Let’s build your streak.</span></p>
+                        <noscript><p>Enable JavaScript to play. You can still explore all the learning pages.</p></noscript>
+                    </div>
+                </div>
+            </div></div>
+        </section>
+        <section class="experience-section projects-section" id="student-work">
+            <div class="container"><div class="section-intro reveal"><div><span class="section-label">04 / FROM IDEA TO IMPACT</span><h2>Built with curiosity.</h2></div><div><p>A glimpse of what CpE thinking can make possible. Illustrative project concepts.</p><a class="text-link" href="projects.html">Explore the project gallery <span aria-hidden="true">↗</span></a></div></div>
+                <div class="project-showcase">
+                    <a class="showcase-card reveal" href="projects.html"><div class="showcase-visual airwatch-visual" aria-hidden="true"><div class="radar-ring"></div><div class="radar-ring ring-two"></div><div class="radar-ring ring-three"></div><div class="sensor-device"><i></i><span>AIRWATCH</span><b>24.8<small>°C</small></b><div class="sensor-dots">••••••••</div></div><span class="visual-label">LIVE ENVIRONMENT / MONITORING</span></div><div class="showcase-description"><span class="section-label">01 / INTERNET OF THINGS</span><h3>Campus Airwatch <span>↗</span></h3><p>A smarter way to understand the air we share.</p></div></a>
+                    <a class="showcase-card reveal" href="projects.html"><div class="showcase-visual rover-visual" aria-hidden="true"><div class="rover-grid"></div><svg viewBox="0 0 360 210" class="rover-drawing"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="m80 131 98-50 103 51-98 50Z"/><path d="m80 131 1 20 102 51 98-50v-20M183 182v20M112 115v-28l64-31 67 33v27M176 56v25m-64 6 64 33 67-31m-67 31v30"/><ellipse cx="115" cy="165" rx="18" ry="23" transform="rotate(-24 115 165)"/><ellipse cx="246" cy="168" rx="18" ry="23" transform="rotate(24 246 168)"/><path d="M177 55V30m-10-3 10-5 10 5-10 5Zm-38 76 22 11m29 2 25-13"/><path d="m290 106 28-15m-22 34 40-6M77 96 48 81m18 32-39-7" stroke-dasharray="4 5"/></g></svg><span class="visual-label">SENSE / NAVIGATE / ASSIST</span></div><div class="showcase-description"><span class="section-label">02 / ROBOTICS</span><h3>Assistive Rover <span>↗</span></h3><p>Engineering movement with a human purpose.</p></div></a>
+                    <a class="showcase-card reveal" href="projects.html"><div class="showcase-visual signal-visual" aria-hidden="true"><div class="signal-chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="signal-zero">0.0001 / PATTERN DETECTED</span><span class="visual-label">RAW DATA → REAL UNDERSTANDING</span></div><div class="showcase-description"><span class="section-label">03 / AI & MACHINE LEARNING</span><h3>Signal Studio <span>↗</span></h3><p>Find the meaningful patterns in the noise.</p></div></a>
+                </div>
+            </div>
+        </section>
+        <section class="experience-section community-section" id="your-next-step"><div class="container"><div class="community-layout"><div class="community-story reveal"><span class="section-label">05 / YOUR PEOPLE. YOUR POSSIBILITIES.</span><h2>Great things<br>aren’t built <span class="serif-accent">alone.</span></h2><p>Find your people at the University of the East. Explore the program, meet the CpE community, and discover where your ideas could take you.</p><a class="action-button primary-action" href="cpe-ue.html">Discover CpE at UE <svg class="ui-icon"><use href="#i-arrow"/></svg></a></div><div class="community-links reveal"><a href="cpe-ue.html"><span>01</span><div><h3>Learn by building.</h3><p>The program & learning experience</p></div><b>↗</b></a><a href="scpes.html"><span>02</span><div><h3>Find your community.</h3><p>Society of Computer Engineering Students</p></div><b>↗</b></a><a href="careers.html"><span>03</span><div><h3>Design your future.</h3><p>Explore the many careers in CpE</p></div><b>↗</b></a></div></div></div></section>
+    </main>
+    <footer class="site-footer">
+        <div class="container"><div class="footer-top"><a class="navbar-brand" href="index.html"><span class="brand-mark">UE<span class="brand-mark-dot"></span></span><span class="brand-wordmark">COMPUTER<span>ENGINEERING</span></span></a><p>Stay curious. Keep building.</p><a class="text-link" href="contact.html">Let’s connect <span aria-hidden="true">↗</span></a></div><div class="footer-links"><span>A concept portal for the next generation of engineers.</span><nav aria-label="Footer navigation"><a href="about-cpe.html">About</a><a href="cpe-ue.html">Program</a><a href="careers.html">Careers</a><a href="specializations.html">Specializations</a><a href="projects.html">Projects</a><a href="faculty.html">Faculty</a><a href="scpes.html">SCPES</a><a href="contact.html">Contact & FAQ</a></nav></div><div class="footer-bottom"><small>© 2026 UE Computer Engineering. Academic concept website.</small><small>Verify official program details with UE.</small><span><i class="status-dot"></i> MADE OF IDEAS & ELECTRONS</span></div></div>
+    </footer>
+    <button class="back-top" type="button" aria-label="Back to top">↑</button>
+    <dialog class="game-dialog" id="game-dialog" aria-labelledby="game-title"><div class="game-window"><div class="game-topbar"><span><i class="status-dot"></i> CPE PLAY LAB <span id="game-mode-label">/ QUEST</span></span><div><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false">Sound off</button><button class="game-close" id="game-close" type="button" aria-label="Exit challenge">×</button></div></div><div id="game-content"></div></div></dialog>
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/play-lab.js"></script>
 </body>
 </html>
